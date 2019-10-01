@@ -9,8 +9,6 @@ function submitData (userName,userEmail){
   body:JSON.stringify({name:userName, email:userEmail})
 }
 return fetch(URL,options)
-}
-submitData('John','John@domain.com')
 .then(res => {
   return res.json();
 })
@@ -19,3 +17,5 @@ submitData('John','John@domain.com')
   el.innerHTML = json.id
   document.body.appendChild(el);
 }).catch(err => document.body.innerHTML = err.message)
+}
+submitData('John','John@domain.com')
